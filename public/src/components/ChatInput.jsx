@@ -84,8 +84,6 @@ const Container = styled.div`
         background-color:#080420;
         box-shadow:0 5px 10px #9a86f3;
         border-color:#9186f3;
-        
-        z-index: 100;
       }
     }
   }
