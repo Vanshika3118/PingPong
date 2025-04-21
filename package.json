@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "emoji-picker-react": "^4.12.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "start": "concurrently \"cd public && npm start\" \"cd server && npm start\"",
+    "install-all": "npm install && cd public && npm install && cd ../server && npm install"
   }
 }
