@@ -7,6 +7,8 @@
   },
   "scripts": {
     "start": "concurrently \"cd public && npm start\" \"cd server && npm start\"",
-    "install-all": "npm install && cd public && npm install && cd ../server && npm install"
+    "build": "concurrently \"cd public && npm run build\" \"cd server && npm run build\"",
+    "build:frontend": "cd public && npm run build",
+    "build:backend": "cd server && npm run build"
   }
 }
