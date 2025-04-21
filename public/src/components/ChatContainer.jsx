@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logout from "./Logout";
 import ChatInput from "./ChatInput";
-import axios, { getAdapter } from "axios";
+import axios from "axios";
 import { useRef } from "react";
 import { getAllMessagesRoute, sendMessageRoute } from "../utils/APIRoutes";
 import {v4 as uuidv4} from "uuid";
@@ -28,7 +28,7 @@ function ChatContainer({ currentChat, currentUser, socket }) {
     if (currentChat) {
       fetchMessages();
     }
-  }, [currentChat]);
+  }, [currentChat, currentUser._id]);
 
   const handleSendMsg = async (msg) => {
     await axios.post(sendMessageRoute, {
